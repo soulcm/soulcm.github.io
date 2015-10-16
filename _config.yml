@@ -1,0 +1,10 @@
+# Site settings
+title: 季陆的博客
+email: liuchunmeng66@163.com
+description: ""
+baseurl: "" # the subpath of your site, e.g. /blog/
+github_username: soulcm
+permalink: /:year/:month/:day/:title/
+
+# Build settings
+markdown: kramdown

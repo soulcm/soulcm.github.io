@@ -1,0 +1,31 @@
+---
+layout: default
+---
+
+<div class="home">
+
+  <h1 class="page-heading">Posts</h1>
+
+  <ul class="post-list">
+    {% for post in site.posts %}
+      <li>
+        <h2>
+          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+        </h2>
+        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
+      </li>
+    {% endfor %}
+  </ul>
+
+</div>
+
+<div class="rightbar">
+  <div class="categories">
+    <h2>文章分类</h2>
+    <ul>
+      <li><a>测试</a></li>
+      <li><a href="">博客</a></li>
+      <li><a href="">工具</a></li>
+    </ul>
+  </div>
+</div>

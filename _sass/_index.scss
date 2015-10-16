@@ -1,0 +1,49 @@
+.home {
+	float: left;
+	width: 70%;
+}
+
+.rightbar {
+	margin-left: 71%;
+}
+
+.categories {
+	border: 1px solid #ccc;
+	padding: 15px;
+
+	h2 {
+		font-size: 22px;
+		font-weight: normal;
+		border-bottom: 1px dashed #ccc;
+		width: 590px;
+		max-width: 100%;
+		line-height: 2;
+		margin-bottom: 15px;
+	}
+
+	ul {
+		padding-left: 20px;
+
+		li {
+			 margin-bottom: 5px;
+			line-height: 28px;
+			font-size: 16px;
+		}
+	}
+}
+
+.footer-col-wrapper {
+	.point {
+		margin: 0 8px;
+	}
+	a {
+		color: $grey-color;
+		text-decoration: none;
+	}
+}
+
+@media screen and (min-width: 768px){
+	#markdown-toc {
+		display: none;
+	}
+}
