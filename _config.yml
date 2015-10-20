@@ -8,3 +8,6 @@ permalink: /:year/:month/:day/:title/
 
 # Build settings
 markdown: kramdown
+
+paginate: 10
+paginate_path: "page:num"

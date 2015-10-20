@@ -6,26 +6,76 @@ layout: default
 
   <h1 class="page-heading">Posts</h1>
 
-  <ul class="post-list">
-    {% for post in site.posts %}
-      <li>
-        <h2>
-          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-        </h2>
-        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
-      </li>
+  <div class="post-list-body">
+    <div post-cate="All">
+      <ul class="post-list" >
+        {% for post in paginator.posts %}
+          <li>
+            <h2>
+              <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+            </h2>
+            <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
+          </li>
+        {% endfor %}
+      </ul>
+
+      <div class="paginator">
+        {% if paginator.total_pages > 1 %}
+          <!-- 分页代码 -->
+          {% if paginator.previous_page %}
+            <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">上一页</a>
+          {% endif %}
+
+          {% for page in (1..paginator.total_pages) %}
+              {% if page == paginator.page %}
+                <span class="active">{{ page }}</span>
+              {% elsif page == 1 %}
+                <a href="{{ site.baseurl | replace: '//', '/' }}/">{{ page }}</a>
+              {% else %}
+                <a href="/{{ site.paginate_path | prepend: site.url | replace: '//', '/' | replace: ':num', page }}">{{ page }}</a>
+              {% endif %}
+          {% endfor %}
+
+          {% if paginator.next_page %}
+              <a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">下一页</a>
+          {% endif %}
+        {% endif %}
+      </div>
+    </div>
+
+    {% for category in site.categories %}
+      <div post-cate="{{category | first}}">
+        <ul class="post-list">
+          {% for posts in category  %}
+            {% for post in posts %}
+              {% if post.url %}
+                <li>
+                  <h2>
+                    <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+                  </h2>
+                  <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
+                </li>
+              {% endif %}
+            {% endfor %}
+          {% endfor %}
+        </ul>
+      </div>
     {% endfor %}
-  </ul>
+  </div>
 
 </div>
 
 <div class="rightbar">
   <div class="categories">
     <h2>文章分类</h2>
-    <ul>
-      <li><a>测试</a></li>
-      <li><a href="">博客</a></li>
-      <li><a href="">工具</a></li>
-    </ul>
+
+    <a href="{{'/index.html' | prepend: site.baseurl}}" class="categories-list-item" cate="All">
+    All<span class="my-badge"> {{site.posts | size}}</span>
+    </a>
+    {% for category in site.categories order:ascending %}
+      <a href="javascript:void(0)" class="categories-list-item" cate="{{ category | first }}">
+        {{ category | first }} <span class="my-badge">{{ category | last | size }}</span>
+      </a>
+    {% endfor %}
   </div>
 </div>

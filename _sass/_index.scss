@@ -48,3 +48,87 @@
 		display: none;
 	}
 }
+
+/**
+ * back to top
+ */
+#top {
+	position: fixed;
+	right: 25px;
+	bottom: 10px;
+	width: 60px;
+	height: 60px;
+	background-color: #bbb;
+	border-radius:7px;
+	opacity: 0.8;
+	display: none;
+	z-index: 888;
+}
+#top .arrow{
+	margin:0 auto;
+	padding-top:11px;
+	width:0;
+	height: 0;
+	border-right: 15px solid transparent;
+	border-left: 15px solid transparent; 
+	border-bottom: 15px solid #7f7f7f;
+	
+}
+#top .stick{
+	margin:0 auto;
+	padding-bottom:21px;
+	width: 13px;
+	border-bottom: 13px solid #bbb;
+	background-color: #7f7f7f;
+}
+
+.categories-list-item{
+	display: block;
+	padding:8px 15px; 
+	border-bottom:1px solid #ddd; 
+
+	transition:0.4s ease;
+	-webkit-transition:0.4s ease;
+	-moz-transition:0.4s ease;
+	-o-transition:0.4s ease;
+}
+.categories-list-item:last-of-type{
+	border-bottom:none; 
+}
+.categories-list-item:hover{
+	background-color: rgba(0,0,10,0.075);
+	color: #983;
+}
+.categories-list-item .my-badge{
+	font-size: 12px;
+	font-weight: bold;
+	color: #fff;
+	background-color: #999;
+	padding: 0 7px 1px 7px;
+	border-radius: 9px;
+	float: right;
+	transition:0.4s ease;
+	-webkit-transition:0.4s ease;
+	-moz-transition:0.4s ease;
+	-o-transition:0.4s ease;
+}
+.categories-list-item:hover .my-badge{
+	-webkit-transform:rotate(360deg) scale(1.2);
+	-moz-transform:rotate(360deg) scale(1.2);
+	-o-transform:rotate(360deg) scale(1.2);
+	-ms-transform:rotate(360deg) scale(1.2);
+	transform:rotate(360deg) scale(1.2);
+}
+
+.paginator{
+	text-align: center;
+}
+.paginator a{
+	/*display: inline-block;*/
+	margin: 0 12px;
+}
+.paginator .active{
+	margin: 0 12px;
+	color:#2E2435;
+	font-weight: bold;
+}
