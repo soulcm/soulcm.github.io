@@ -19,7 +19,7 @@ icon: heart
 
 * Email：[liuchunmeng666@163.com](mailto:{{ site.email }})
 * QQ：403229009
-* WeChat：liucm666000
+* WeChat：<img src="{{"/public/img/wechat.png" | prepend:site.baseurl}}" alt="liucm666000" width="80" height="80">
 
 ---
 
