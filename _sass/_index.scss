@@ -49,6 +49,15 @@
 	}
 }
 
+@include media-query($mobile-width) {
+	.rightbar {
+		display: none;
+	}
+	.home {
+		width: 100%;
+	}
+}
+
 /**
  * back to top
  */
