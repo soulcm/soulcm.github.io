@@ -15,3 +15,4 @@ excerpt: 有趣的前端demo
 > 4. [csshake,看完后有没有觉得iphone的APP在被删时抖的太矜持了](http://elrumordelaluz.github.io/csshake/)
 > 5. [书本中的炫丽](http://www.webhek.com/misc/creativeguidebook/)
 > 6. [华丽的3D效果](http://www.17sucai.com/preview/147469/2014-06-19/3D_Animation/index.html)
+> 7. [镜像炫丽画画](http://weavesilk.com/)
