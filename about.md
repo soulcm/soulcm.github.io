@@ -18,9 +18,6 @@ icon: heart
 ### 联系我
 
 * Email：[liuchunmeng666@163.com](mailto:{{ site.email }})
-* QQ：403229009
-* WeChat：<img src="{{"/public/img/wechat.png" | prepend:site.baseurl}}" alt="liucm666000" width="80" height="80"><!-- &nbsp;&nbsp;&nbsp;&nbsp;
-**赤兔**：<img src="{{"/public/img/red.png" | prepend:site.baseurl}}" alt="赤兔" width="80" height="80"> -->
 
 ---
 
